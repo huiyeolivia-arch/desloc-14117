@@ -112,33 +112,34 @@ const DataEntryForm: React.FC<Props> = ({ formData, onChange, onSave, onDelete, 
           <div className="mb-6 p-4 bg-indigo-50 border border-indigo-200 rounded-lg animate-in fade-in slide-in-from-top-2">
             <h4 className="text-xs font-black text-indigo-900 uppercase tracking-widest mb-3 flex items-center gap-2">
               <span className="w-2 h-2 bg-indigo-600 rounded-full"></span>
-              内部人员数据填写说明
+              内部人员填写说明
             </h4>
             
             <div className="space-y-4">
               <p className="text-[12px] text-indigo-800 leading-snug">
-                此处填写的是所有内部员工<strong>合并去重后</strong>可接触到的美国用户人数。请勿直接累加各员工的独立访问量。
+                请填写所有内部员工合并去重后可接触到的美国自然人数。<br/>
+                <strong>（所有内部员工合并去重）</strong>
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div className="bg-white/60 p-2.5 rounded border border-indigo-100">
-                  <span className="text-[10px] font-bold text-indigo-400 uppercase block mb-1">示例：无数据重叠</span>
+                  <span className="text-[10px] font-bold text-indigo-400 uppercase block mb-1">示例：无重叠</span>
                   <p className="text-[11px] text-indigo-900">
-                    员工 A 和 B 分别接触 100 名<strong>不同</strong>的人。<br/>
+                    员工 A 和 B 分别接触 100 名不同的人。<br/>
                     <strong className="text-indigo-600 font-black">应填写：200</strong>
                   </p>
                 </div>
                 <div className="bg-white/60 p-2.5 rounded border border-indigo-100">
-                  <span className="text-[10px] font-bold text-indigo-400 uppercase block mb-1">示例：有数据重叠</span>
+                  <span className="text-[10px] font-bold text-indigo-400 uppercase block mb-1">示例：有重叠</span>
                   <p className="text-[11px] text-indigo-900">
-                    员工 A 和 B 均接触 100 人，其中 50 人为<strong>同一批人</strong>。<br/>
-                    <strong className="text-indigo-600 font-black">应填写：150</strong> (去重后人数)
+                    员工 A 和 B 均接触 100 人，其中 50 人为同一个人。<br/>
+                    <strong className="text-indigo-600 font-black">应填写：150（去重后人数）</strong>
                   </p>
                 </div>
               </div>
 
               <div className="text-[11px] font-bold text-indigo-700 p-2 bg-white/40 rounded italic border-l-2 border-indigo-400">
-                注意：统计单位是“自然人数量”，而非数据记录行数。
+                注意：统计单位是“自然人数”，即用户人数，而非数据条数。
               </div>
             </div>
           </div>

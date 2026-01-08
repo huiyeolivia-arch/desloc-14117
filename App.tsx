@@ -94,7 +94,7 @@ const App: React.FC = () => {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left Column: Input Form */}
-          <div className="lg:col-span-7 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <div className="lg:col-span-7 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm overflow-hidden h-fit">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-lg font-black text-slate-800 tracking-tight">
                 {editingId ? '正在修改评估记录' : '发起合规评估'}
@@ -118,15 +118,11 @@ const App: React.FC = () => {
             />
           </div>
 
-          {/* Right Column: Risk Dashboard */}
-          <div className="lg:col-span-5">
+          {/* Right Column: Risk Dashboard & History */}
+          <div className="lg:col-span-5 space-y-8">
             <EvaluationPanel result={evalResult} />
+            <HistoricalTable entries={entries} onSelect={handleSelectEntry} />
           </div>
-        </div>
-
-        {/* History Table */}
-        <div className="mt-12">
-          <HistoricalTable entries={entries} onSelect={handleSelectEntry} />
         </div>
       </main>
 

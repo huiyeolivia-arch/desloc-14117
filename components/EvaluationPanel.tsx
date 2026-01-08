@@ -23,7 +23,7 @@ const EvaluationPanel: React.FC<Props> = ({ result }) => {
   const isHighRisk = result.riskLevel === 'High Risk' || result.riskLevel === 'Critical';
 
   return (
-    <div className="space-y-4 sticky top-[100px]">
+    <div className="space-y-4">
       <h2 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2 px-1">评估结果</h2>
       
       {/* Primary Risk Status Card */}
