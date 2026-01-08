@@ -117,8 +117,7 @@ const DataEntryForm: React.FC<Props> = ({ formData, onChange, onSave, onDelete, 
             
             <div className="space-y-4">
               <p className="text-[12px] text-indigo-800 leading-snug">
-                请填写所有内部员工合并去重后可接触到的美国自然人数。<br/>
-                <strong>（所有内部员工合并去重）</strong>
+                请填写<strong>所有内部员工合并去重</strong>后可接触到的美国自然人数。
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
