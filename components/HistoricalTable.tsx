@@ -86,7 +86,7 @@ const HistoricalTable: React.FC<Props> = ({ entries, onSelect }) => {
             <tr className="bg-slate-50 text-slate-500 uppercase font-bold tracking-wider">
               <th className="px-4 py-3">统计截止日期</th>
               <th className="px-4 py-3">评估场景</th>
-              <th className="px-4 py-3">规管组合人数</th>
+              <th className="px-4 py-3">美国用户人数</th>
               <th className="px-4 py-3">风险等级</th>
               <th className="px-4 py-3">配额比例</th>
               <th className="px-4 py-3">修改时间</th>
